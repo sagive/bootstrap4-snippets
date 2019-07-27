@@ -1,0 +1,20 @@
+jQuery(function($){
+
+
+    $('.btn-class').popover({
+		container: 'body',
+		placement: 'bottom',
+		html: true,
+		sanitize: false,
+		title: function() {
+			var title = $(this).attr('data-title'); // set on button or anywhere else
+            return title;
+        },
+      content: function() {
+        var ele = $('#target-element-id').html();
+        return ele;
+      }
+    });
+        
+
+});
